@@ -4,8 +4,9 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+    width: min(1440px, 100vw);
+    aspect-ratio: 1440 / 1024;
+    background-color: rgb(250, 250, 250);
     margin: 0;
     padding: 0;
     display: flex;
@@ -13,10 +14,13 @@ body {
 }
 
 #left {
-    flex: 1;
+    flex: 0.6;
     background-image: url(./res/halie-west-25xggax4bSA-unsplash.jpg);
     background-size: cover;
-    background-position: 50%;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #logo {
@@ -24,12 +28,12 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
-    position: relative;
-    top: 30%;
+    padding: 0.5rem;
+    margin-top: 9rem;
 }
 
 #logo img {
-    height: 100px;
+    height: 5rem;
 }
 
 @font-face {
@@ -39,14 +43,16 @@ body {
 
 #logo h1 {
     font-family: NorseBold;
-    font-size: 5rem;
+    font-size: 4rem;
     color: white;
+    margin: 0;
 }
 
 #left p {
-    position: absolute;
-    bottom: 0%;
     color: white;
+    text-align: center;
+    font-size: 0.5rem;
+    font-weight: 300;
 }
 
 #left p a {
@@ -54,27 +60,89 @@ body {
 }
 
 #right {
-    flex: 2;
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
 
 #upper {
     flex: 1;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+}
+
+#upper p {
+    width: 31rem;
+    margin: 0;
+    margin-top: 1rem;
 }
 
 #middle {
     flex: 1;
+    background-color: white;
+    box-shadow: 0px 3px 8px -4px grey;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 3rem;
+}
+
+#middle #title {
+    width: 100%;
+    margin: 0;
+    font-weight: bold;
+    color: hsl(0, 0%, 20%);
+}
+
+#middle p :not(#title) {
+    display: flex;
+    flex-direction: column;
+}
+
+#middle label {
+    text-transform: uppercase;
+    font-size: 0.5rem;
 }
 
 #middle input {
-    border-color: #E5E7EB;
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+    padding-left: 10px;
+    outline: none;
+}
+
+#middle input:focus {
+    border: 1px solid blue;
+    box-shadow: 3px 3px 8px -4px grey;
+}
+
+#middle input:invalid {
+    border: 1px solid red;
 }
 
 #lower {
     flex: 1;
+    padding: 2rem;
 }
 
 #lower button {
     background-color: #596D48;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 3px 3px 8px -4px grey;
+}
+
+#lower p {
+    font-size: 0.7rem;
+}
+
+#lower p a {
+    color: #596D48;
+    text-decoration: none;
 }

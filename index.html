@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Odin sign-up form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -11,7 +12,9 @@
             <img src="./res/odin-lined.png">
             <h1>ODIN</h1>
         </div>
-        <p>Photo by <a href="#">Halie West</a> on <a href="#">Unsplash</a></p>
+        <p>
+            Photo by <a href="#">Halie West</a> on <a href="#">Unsplash</a>
+        </p>
     </div>
     <form id="right" action="#" method="post">
         <div id="upper">
@@ -19,26 +22,32 @@
             <p>You <em>know</em> you want to.</p>
         </div>
         <div id="middle">
-            <p>
+            <p id="title">
                 Let's do this!
             </p>
             <p>
-                <label for="first_name">First name</label><br>
+                <label for="first_name">First name</label>
                 <input type="text" id="first_name" name="first_name">
+            </p>
+            <p>
                 <label for="last_name">Last name</label>
                 <input type="text" id="last_name" name="last_name">
             </p>
             <p>
                 <label for="e_mail">Email</label>
                 <input type="email" id="e_mail" name="e_mail">
+            </p>
+            <p>
                 <label for="phone_number">Phone number</label>
                 <input type="tel" id="phone_number" name="phone_number">
             </p>
             <p>
                 <label for="pwd">Password</label>
-                <input type="password" id="pwd" name="pwd">
+                <input type="password" id="pwd" name="pwd" required>
+            </p>
+            <p>
                 <label for="confirm_pwd">Confirm password</label>
-                <input type="password" id="confirm_pwd" name="confirm_pwd">
+                <input type="password" id="confirm_pwd" name="confirm_pwd" required>
             </p>
         </div>
         <div id="lower">
